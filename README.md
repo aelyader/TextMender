@@ -1,6 +1,6 @@
 <h1 align="center">TextMender: User Guide and README</h1>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/aelyader/TextMender/main/images/textmender_2final.jpg" width="400" height="400">
+  <img src="[https://raw.githubusercontent.com/aelyader/TextMender/main/images/textmender_2final.jpg](https://raw.githubusercontent.com/aelyader/TextMender/main/images/textmender_2final.jpg)" width="400" height="400">
 </p>
 
 Welcome to **TextMender**, a web application for text summarization and paraphrasing, leveraging state-of-the-art language models from Hugging Face’s Transformers library. TextMender is ideal for condensing large pieces of text into concise summaries or generating rephrased content while maintaining the original meaning.
