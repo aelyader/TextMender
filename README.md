@@ -3,8 +3,11 @@
   <img src="images/textmender_2final.jpg" width="400" height="400">
 </p>
 
-Welcome to **TextMender**, a web application for text summarization and paraphrasing, leveraging state-of-the-art language models from Hugging Face’s Transformers library. TextMender is ideal for condensing large pieces of text into concise summaries or generating rephrased content while maintaining the original meaning.
+# Welcome to TextMender
 
+TextMender is a completely free, locally-run web application for text summarization and paraphrasing. Leveraging state-of-the-art language models from Hugging Face’s Transformers library, TextMender is ideal for condensing large pieces of text into concise summaries or generating rephrased content while maintaining the original meaning.
+
+Since TextMender runs entirely on your local machine, no data is sent to external servers, ensuring privacy and control over your content.
 ---
 
 ## **Setting Up Your Environment**
