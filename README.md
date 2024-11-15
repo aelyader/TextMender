@@ -11,8 +11,6 @@ TextMender is a **completely _FREE_**, locally-run web application for text summ
 
 ## **Setting Up Your Environment**
 
-**YouTube Tutorial**  
-[![TextMender Tutorial](https://raw.githubusercontent.com/your-username/TextMender/main/images/youtube_thumbnail.png)](https://youtu.be/your_video_link "Click to watch the video")
 
 ### **Prerequisites**
 
