@@ -34,18 +34,22 @@ TextMender is a **completely _FREE_**, locally-run web application for text summ
     cd TextMender
     ```
 
-2. **Set Up Virtual Environment**:
+2. **Set Up the Environment Using Conda**:
+
+    Use the provided `.yml` file to create the environment with all dependencies:
 
     ```bash
-    python -m venv env
-    source env/bin/activate  # On Windows, use `env\Scripts\activate`
+    conda env create -f environment.yml
     ```
 
-3. **Install Required Packages**:
+    Activate the newly created environment:
 
     ```bash
-    pip install -r requirements.txt
+    conda activate textmender-env  # Replace 'textmender-env' with the environment name specified in environment.yml
     ```
+
+3. **Verify Installation**:  
+   Make sure all packages are installed correctly by confirming the environment is active.
 
 4. **Download the Models**:  
    The necessary NLP models (BART for summarization and T5 for paraphrasing) are downloaded automatically on the first run. Ensure an internet connection is available for the initial download.
