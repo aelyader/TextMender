@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Summarizer and Paraphraser</title>
+    <title>TextMender: AI-Powered Tools</title>
     <style>
         /* Reset some basic styling */
         * {
@@ -14,8 +14,8 @@
         }
 
         body {
-            background-color: #f5f7fa;
-            color: #333;
+            background-color: #1e1e1e;
+            color: #f5f5f5;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -32,11 +32,11 @@
         }
 
         .container {
-            background-color: #ffffff;
+            background-color: #2b2b2b;
             width: 80%;
             max-width: 800px;
             padding: 20px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
             border-radius: 8px;
         }
 
@@ -69,9 +69,15 @@
             padding: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
-            border: 1px solid #ccc;
+            border: 1px solid #555;
             font-size: 1em;
+            background-color: #333;
+            color: #f5f5f5;
             resize: vertical;
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px;
         }
 
         button {
@@ -90,11 +96,11 @@
         }
 
         .output-section {
-            background-color: #f9f9f9;
+            background-color: #333;
             padding: 15px;
             border-radius: 5px;
             margin-top: 20px;
-            border: 1px solid #ddd;
+            border: 1px solid #555;
         }
 
         .output-section h3 {
@@ -106,7 +112,7 @@
             white-space: pre-wrap;
             font-size: 1em;
             line-height: 1.5;
-            color: #555;
+            color: #f5f5f5;
         }
 
         .output-section em {
@@ -122,7 +128,7 @@
             <img src="https://raw.githubusercontent.com/aelyader/GisGen/refs/heads/main/images/textmender_2final.jpg" alt="TextMender Logo" width="400" height="400">
         </div>
 
-        <h1>Text Summarizer and Paraphraser</h1>
+        <h1>TextMender: AI-Powered Tools</h1>
 
         <!-- Form for summarizing text -->
         <h2>Summarize Text</h2>
@@ -155,6 +161,23 @@
                 <p>{{ paraphrased }}</p>
             {% else %}
                 <p><em>No paraphrased text generated yet.</em></p>
+            {% endif %}
+        </div>
+
+        <!-- Form for image captioning -->
+        <h2>Generate Image Caption</h2>
+        <form method="POST" action="/generate-caption" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*"><br>
+            <button type="submit">Generate Caption</button>
+        </form>
+
+        <!-- Display the image caption if available -->
+        <div class="output-section">
+            {% if caption %}
+                <h3>Generated Caption</h3>
+                <p>{{ caption }}</p>
+            {% else %}
+                <p><em>No caption generated yet.</em></p>
             {% endif %}
         </div>
     </div>
