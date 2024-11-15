@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer and Paraphraser</title>
+    <style>
+        /* Reset some basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a90e2;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #4a90e2;
+            margin-top: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        form {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #357ab8;
+        }
+
+        .output-section {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .output-section h3 {
+            color: #4a90e2;
+            font-size: 1.2em;
+        }
+
+        .output-section p {
+            white-space: pre-wrap;
+            font-size: 1em;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .output-section em {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Add the image from GitHub at the top -->
+        <div class="logo-container">
+            <img src="https://raw.githubusercontent.com/aelyader/GisGen/refs/heads/main/images/textmender_2final.jpg" alt="TextMender Logo" width="400" height="400">
+        </div>
+
+        <h1>Text Summarizer and Paraphraser</h1>
+
+        <!-- Form for summarizing text -->
+        <h2>Summarize Text</h2>
+        <form method="POST" action="/summarize">
+            <textarea name="text" placeholder="Enter text here..."></textarea><br>
+            <button type="submit">Summarize</button>
+        </form>
+
+        <!-- Display the summary if available -->
+        <div class="output-section">
+            {% if summary %}
+                <h3>Summary</h3>
+                <p>{{ summary }}</p>
+            {% else %}
+                <p><em>No summary generated yet.</em></p>
+            {% endif %}
+        </div>
+
+        <!-- Form for paraphrasing text -->
+        <h2>Paraphrase Text</h2>
+        <form method="POST" action="/paraphrase">
+            <textarea name="text" placeholder="Enter text here..."></textarea><br>
+            <button type="submit">Paraphrase</button>
+        </form>
+
+        <!-- Display the paraphrased text if available -->
+        <div class="output-section">
+            {% if paraphrased %}
+                <h3>Paraphrased Text</h3>
+                <p>{{ paraphrased }}</p>
+            {% else %}
+                <p><em>No paraphrased text generated yet.</em></p>
+            {% endif %}
+        </div>
+    </div>
+
+</body>
+</html>
