@@ -25,7 +25,7 @@ TextMender is a **completely _FREE_**, locally-run web application for text summ
 1. **Clone the Repository**: Clone the TextMender GitHub repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/TextMender.git
+    git clone https://github.com/aelyader/TextMender.git
     ```
 
     Navigate to the cloned directory:
