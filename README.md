@@ -141,7 +141,7 @@ TextMender does not generate downloadable output files but displays results dire
 ---
 
 <p align="center">
-  <img src="images/Screenshot_TM.jpg" width="500" height="818">
+  <img src="images/Screenshot_TM2.jpg" width="500" height="818">
 </p>
 
 For issues or further assistance, please refer to the GitHub issues page or contact the development team.
